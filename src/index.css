@@ -52,10 +52,6 @@ body {
 .trend-box {
 background-color: #2e303b;}
 
-.MuiPaginationItem-root {
-  @apply text-inherit dark:text-eee
-}
-
 .rounded-a {
   @apply text-gray-500 active:border-primary-500 active:font-semibold hover:text-gray-700 hover:border-gray-300 dark:text-0.6 dark:active:text-1 dark:hover:text-0.87 dark:hover:border-0.24 dark:active:border-primary-500 
 }

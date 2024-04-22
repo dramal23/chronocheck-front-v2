@@ -28,7 +28,7 @@ function Montres({ montres }) {
                                     <td>{montre.brand_name}</td>
                                     <td>{montre.avg_price}</td>
                                     <td>
-                                    <Sparklines data={montre.price_history.split(',').map(price => parseInt(price))}>
+                                    <Sparklines svgWidth={250} data={montre.price_history.split(',').map(price => parseInt(price))}>
                                         <SparklinesLine color="white" />
                                     </Sparklines>
                                     </td>
