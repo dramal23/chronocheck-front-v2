@@ -1,16 +1,16 @@
 import React, { useEffect, useState } from 'react'
 import axios from "axios"
-import { Sparklines, SparklinesLine } from 'react-sparklines';
+import { Sparklines, SparklinesLine, SparklinesCurve , SparklinesSpots} from 'react-sparklines';
 import { useParams } from 'react-router-dom';
 import ReactLoading from "react-loading";
 
 function MontrePage() {
 
     const [data, setData] = useState([])
-    const { montreId } = useParams();
+    const { montreModelName } = useParams();
     const [loading, setLoading] = useState(false)
 
-    const url = `http://localhost:4000/watches/${montreId}`
+    const url = `http://localhost:4000/watches/${encodeURIComponent(montreModelName)}`;
 
     console.log("URL de l'API:", url);
 
@@ -18,7 +18,11 @@ function MontrePage() {
         try {
             await axios.get(url)
                 .then((response) => {
-                    setData(response.data.data)
+                    console.log(response.data[0]);
+                    console.log(response.data[0].model_name);
+                    console.log(response.data[0].image);
+                    console.log(response.data[0].price_history);
+                    setData(response.data);
                 })
             setLoading(true)
         } catch (error) {
@@ -39,15 +43,16 @@ function MontrePage() {
                     <div className='flex justify-center'>
                         <div className='flex-col'>
                             <div className='mt-5 flex'>
-                                <img className='w-8 mr-2' src={montreData.image && montreData.image_small} alt={montreData.model_name} />
-                                <h1 className='font-bold text-xl'>{montreData.model_name}</h1>
+                                <img className='w-8 mr-2' src={data[0].image} alt={"Image d'une" + data[0].brand_name}/>
+                                <h1 className='font-bold text-xl'>{data[0].model_name}</h1>
                             </div>
                             <div className='mt-3 flex'>
-                                <h1 className='font-bold text-3xl'>${montreData.price}</h1>
+                                <h1 className='font-bold text-3xl'>Prix actuel : {data[0].price_history[data[0].price_history.length - 1]} €</h1>
                             </div>
                             <div className='mt-4'>
-                                <Sparklines svgWidth={450} data={montreData.price_history}>
-                                    <SparklinesLine color='lightblue' />
+                                <Sparklines svgWidth={450} data={data[0].price_history}>
+                                    <SparklinesCurve color='lightblue' />
+                                    <SparklinesSpots />
                                 </Sparklines>
                             </div>
                         </div>
@@ -59,6 +64,5 @@ function MontrePage() {
         </div>
     )
 }
-
 
 export default MontrePage
