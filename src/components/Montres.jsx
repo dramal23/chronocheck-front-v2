@@ -26,13 +26,19 @@ function Montres({ montres }) {
                                 {montres.data && montres.data.map((montre, index) => (
                                     <tr key={index}>
                                     <td>{montre.brand_name}</td>
-                                    <td>{montre.avg_price}</td>
+                                    <td>{montre.avg_price} €</td>
                                     <td>
-                                    <Sparklines svgWidth={250} data={montre.price_history.split(',').map(price => parseInt(price))}>
-                                        <SparklinesLine color="white" />
-                                    </Sparklines>
+                                        {montre.price_history ? (
+                                            <Sparklines svgWidth={250} data={montre.price_history.split(',').map(price => parseInt(price))}>
+                                                <SparklinesLine color="white" />
+                                            </Sparklines>
+                                        ) : (
+                                            <Sparklines svgWidth={250} data={[0]}>
+                                                <SparklinesLine color="white" />
+                                            </Sparklines>
+                                        )}
                                     </td>
-                                    </tr>
+                                </tr>
                                 ))}
                             </tbody>
                         </table>
