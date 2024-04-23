@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react'
 import logo from '../assets/logo02.png';
 import { Link, useNavigate } from "react-router-dom"
+import {AiOutlineHeart} from "react-icons/ai";
 
 
 function Navbar() {
@@ -31,8 +32,8 @@ function Navbar() {
                                         </Link>
                                     </a>
                                 </li>
-                                <li className=''>
-                                    <a href='javascript:void(0);' className='hover:text-green-hover'>Watchlist</a>
+                                <li>
+                                    <a className='text-gray-500'>Watchlist</a>
                                 </li>
                             </ul>
                         </div>
