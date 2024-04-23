@@ -19,14 +19,14 @@ function Navbar() {
                                     <a href='/#' className='hover:text-green-hover '>Accueil</a>
                                 </li>
                                 <li className='pr-6'>
-                                    <a href='javascript:void(0);' className='hover:text-green-hover'>
+                                    <a href='/marques' className='hover:text-green-hover'>
                                         <Link to="/marques">
                                             Marques
                                         </Link>
                                     </a>
                                 </li>
                                 <li className='pr-6'>
-                                    <a href='javascript:void(0);' className='hover:text-green-hover'>
+                                    <a href='/modeles' className='hover:text-green-hover'>
                                         <Link to="/modeles">
                                             Modèles
                                         </Link>

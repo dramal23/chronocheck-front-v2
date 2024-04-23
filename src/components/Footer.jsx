@@ -37,7 +37,7 @@ function Footer() {
 
                             </li>
                             <li>
-                                <a href='/#' className='hover:text-green-hover '>
+                                <a className='text-gray-500'>
                                     <Link to="/watchlist">
                                         Watchlist
                                     </Link>

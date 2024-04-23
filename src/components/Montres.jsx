@@ -14,7 +14,7 @@ function Montres({ montres }) {
 
                 <div className='relative'>
                     <div className='overflow-x-auto'>
-                        <table class="sortable" className='w-full border-collapse text-center'>
+                        <table className='w-full border-collapse text-center'>
                             <thead className='h-11 '>
                             <tr className='border-b border-t'>
                                 <th></th>
