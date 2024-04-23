@@ -9,6 +9,7 @@ function ModeleItem({ model }) {
                     <div>
                         <img className='rounded-full' src={model.image} alt={model.model_name + " Image"} />
                         <div>
+                            <h2 className='font-semibold text-xl'>{model.brand_name}</h2>
                             <Link to={`/montre/${model.model_name}`}>
                                 <h2 className='font-semibold text-xl'>{model.model_name}</h2>
                             </Link>
