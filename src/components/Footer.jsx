@@ -1,5 +1,5 @@
 import React from 'react'
-import logo from "../assets/logo02.png";
+import logo from "../assets/logo.png";
 import {Link} from "react-router-dom";
 
 function Footer() {
@@ -38,9 +38,7 @@ function Footer() {
                             </li>
                             <li>
                                 <a className='text-gray-500'>
-                                    <Link to="/watchlist">
                                         Watchlist
-                                    </Link>
                                 </a>
 
                             </li>

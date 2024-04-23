@@ -1,7 +1,6 @@
 import React, { useEffect } from 'react'
-import logo from '../assets/logo02.png';
+import logo from '../assets/logo.png';
 import { Link, useNavigate } from "react-router-dom"
-import {AiOutlineHeart} from "react-icons/ai";
 
 
 function Navbar() {
