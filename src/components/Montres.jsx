@@ -14,7 +14,7 @@ function Montres({ montres }) {
 
                 <div className='relative'>
                     <div className='overflow-x-auto'>
-                        <table className='w-full border-collapse text-center'>
+                        <table class="sortable" className='w-full border-collapse text-center'>
                             <thead className='h-11 '>
                             <tr className='border-b border-t'>
                                 <th></th>
@@ -38,7 +38,7 @@ function Montres({ montres }) {
                                         {/*    <img className="rounded-full" src={montre.logo_url} alt={"Image"+ montre.brand_name}/>*/}
                                         {/*</td>*/}
                                         <td></td>
-                                        <td className="font-bold text-l">{montre.brand_name}</td>
+                                        <td className="font-bold text-xl lightblue">{montre.brand_name}</td>
                                         <td>{montre.avg_price} €</td>
                                         <td className="p-4">
                                             {console.log("Price history:", montre.price_history)}
