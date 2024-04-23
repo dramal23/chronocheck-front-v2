@@ -22,14 +22,14 @@ function Montres({ montres }) {
                             </tr>
                             </thead>
                             <tbody>
-                                { console.log(montres)}
+                                {console.log(montres)}
                                 {montres.data && montres.data.map((montre, index) => (
                                     <tr key={index}>
                                     <td>{montre.brand_name}</td>
                                     <td>{montre.avg_price} €</td>
                                     <td>
                                         {montre.price_history ? (
-                                            <Sparklines svgWidth={250} data={montre.price_history.split(',').map(price => parseInt(price))}>
+                                            <Sparklines svgWidth={250} data={montre.price_history.split(',')}>
                                                 <SparklinesLine color="white" />
                                             </Sparklines>
                                         ) : (

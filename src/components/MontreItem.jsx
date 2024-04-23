@@ -10,10 +10,10 @@ function MontreItem({ montre }) {
       <td className='w-5' onClick={savemontre}>
         {savedmontre ? <AiOutlineHeart color='red' /> : <AiOutlineHeart />}
       </td>
-      <td className='lg:w-14'>{montre.market_cap_rank}</td>
+      <td className='lg:w-14'>{montre.id}</td>
       <td>
         <div className='flex items-center'>
-          <img className='w-6 mr-2' src={montre.image} alt={montre.id} />
+          <img className='w-6 mr-2' src={montre.brand_name} alt={montre.id} />
           <div className='w-auto font-bold'><Link to={`/montre/${montre.id}`}>{montre.name}</Link></div>
           <div className='text-xs ml-2 text-hsla-gray dark:text-0.6'><Link to={`/montre/${montre.id}`}>{montre.symbol.toUpperCase()}</Link></div>
         </div>
@@ -23,8 +23,6 @@ function MontreItem({ montre }) {
       </td>
       <td className='w-40 text-sm py-1 px-2'>${montre.current_price.toLocaleString()}</td>
       <td className={montre.price_change_percentage_24h > 0 ? "text-green-500 w-40 text-sm" : "text-red-600 w-40 text-sm"}>{montre.price_change_percentage_24h.toFixed(2)}%</td>
-      {/*<td className='w-40 md:table-cell text-sm py-1 px-2'><span>${montre.total_volume.toLocaleString()}</span></td>*/}
-      {/*<td className='w-40 md:table-cell text-sm py-1 px-2'><span>${montre.market_cap.toLocaleString()}</span></td>*/}
       <td>
         <Sparklines svgWidth={140} data={montre.sparkline_in_7d.price}>
           <SparklinesLine color="lightblue" />
