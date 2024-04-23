@@ -1,4 +1,10 @@
 # ChronoCheck Front Project
 
-This project is still in progress !
-To run this, you need the chronocheck-api that is meant to run alongside on port 4000
+Before starting everything, be sure to have Node v20 LTS
+Run all the steps in the README.md of this URL &rarr; https://github.com/dramal23/chronocheck-api
+After cloning the repo, you can now run these commands :
+
+```
+npm install
+npm run dev
+```
