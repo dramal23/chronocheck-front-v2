@@ -18,9 +18,13 @@ function Marque() {
     return (
         <div className='rounded-div py-5 mb-10'>
             <h1 className='text-3xl font-semibold my-5'>Marques</h1>
+            <div className='justify-center flex my-3'>
+                <input type="text" className='bg-gray-600 rounded-md py-1 indent-3 outline-none my-5'
+                       placeholder='Rechercher'/>
+            </div>
             <div className='grid gap-8 md:grid-cols-2 1xl:grid-cols-3 1sm:grid-cols-1 sm:flex-col  sm:flex mb-16'>
                 {data.map(brand => (
-                    <MarqueItem key={brand.id} brand={brand} />
+                    <MarqueItem key={brand.id} brand={brand}/>
                 ))}
             </div>
         </div>
