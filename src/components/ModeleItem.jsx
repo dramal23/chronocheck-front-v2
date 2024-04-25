@@ -6,6 +6,8 @@ function ModeleItem({ model }) {
         <div className="trend-box rounded-md">
             <div className="rounded-div p-6 hover:scale-105 ease-out duration-300">
                 <div className="flex justify-between items-center">
+                    <Link to={`/montre/${model.model_name}`}>
+
                     <div>
                         <img
                             className="rounded-full"
@@ -14,11 +16,12 @@ function ModeleItem({ model }) {
                         />
                         <div>
                             <h2 className="font-semibold text-xl">{model.brand_name}</h2>
-                            <Link to={`/montre/${model.model_name}`}>
                                 <h2 className="font-semibold text-xl">{model.model_name}</h2>
-                            </Link>
                         </div>
-                    </div>
+
+                </div>
+                    </Link>
+
                     <div className="flex">
                         <p>{model.price}$</p>
                     </div>

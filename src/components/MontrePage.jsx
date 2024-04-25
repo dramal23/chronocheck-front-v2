@@ -46,13 +46,14 @@ function MontrePage() {
                 {loading ? (
                     <div className="flex justify-center">
                         <div className="flex-col">
-                            <div className="mt-5 flex">
+                            <h1 className="font-bold flex justify-center text-2xl">{data[0].model_name}</h1>
+                            <div className="mt-5 flex justify-center justify-items-center ">
                                 <img
-                                    className="w-8 mr-2"
+                                    className="mr-2"
                                     src={data[0].image}
+                                    width="220px"
                                     alt={"Image d'une" + data[0].brand_name}
                                 />
-                                <h1 className="font-bold text-xl">{data[0].model_name}</h1>
                             </div>
                             <div className="mt-3 flex">
                                 <h1 className="font-bold text-3xl">
@@ -62,8 +63,8 @@ function MontrePage() {
                             </div>
                             <div className="mt-4">
                                 <Sparklines svgWidth={450} data={data[0].price_history}>
-                                    <SparklinesCurve color="lightblue" />
-                                    <SparklinesSpots />
+                                    <SparklinesCurve color="lightblue"/>
+                                    <SparklinesSpots/>
                                 </Sparklines>
                             </div>
                         </div>
