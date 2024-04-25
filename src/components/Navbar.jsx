@@ -35,6 +35,13 @@ function Navbar() {
                             </ul>
                         </div>
                     </div>
+                    <div className='flex items-center'>
+                        <div className='md:block hidden mt-3'>
+                            <Link to="/connexion" className="hover:text-green-hover">
+                                Connexion
+                            </Link>
+                        </div>
+                        </div>
                 </div>
             </div>
         </header>

@@ -4,6 +4,9 @@ import MontrePage from "./components/MontrePage";
 import Footer from "./components/Footer";
 import Modeles from "./routes/Modeles";
 import Marques from "./routes/Marques";
+import Connexion from "./routes/Connexion";
+import Inscription from "./routes/Inscription";
+
 import { Routes, Route, Router } from "react-router-dom";
 import Home from "./routes/Home";
 import { useEffect } from "react";
@@ -31,6 +34,10 @@ function App() {
                 <Route path="/montre/:montreModelName" element={<MontrePage/>}>
                     <Route path=":montreModelName"/>
                 </Route>
+                <Route path="/connexion" element={<Connexion />} />
+                <Route path="/inscription" element={<Inscription />} />
+
+
             </Routes>
             <Footer/>
         </div>
